@@ -34,3 +34,19 @@ nav ul li a {
   color: #333;
   font-weight: bold;
 }
+
+.book-card {
+  display: grid;
+  gap: 25%;
+  margin-top: 3%;
+}
+
+.book-ul {
+  display: grid;
+  gap: 5%;
+}
+
+.book-ul li {
+  display: flex;
+  gap: 5%;
+}
