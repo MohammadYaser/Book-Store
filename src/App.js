@@ -12,19 +12,22 @@ function App() {
       <Router>
         <header>
           <div className="header-container">
-            <h1>Books Store</h1>
-            <nav>
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/catagories">Catagories</Link>
-                </li>
-              </ul>
-            </nav>
+            <div className="header-left">
+              <h1>Books Store</h1>
+              <nav>
+                <ul>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/categories">Categories</Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </header>
+
         <Routes>
           <Route path="/" element={<Books />} />
           <Route path="/catagories" element={<Catagories />} />
