@@ -16,7 +16,7 @@
 - [📝 License](#license)
 
 
-# 📖 Math Magicians <a name="about-project"></a>
+# 📖 Book Store <a name="about-project"></a>
 <br>
 ## Book Store
 Welcome to Bookstore Central, your premier web destination for all your reading needs! Our versatile book store app is designed to make browsing, discovering, and purchasing your favorite books a delightful experience. Bookstore Central is here to enrich your literary journey with a user-friendly interface that brings the world of books to your fingertips. Explore, read, and shop with ease at Bookstore Central.
