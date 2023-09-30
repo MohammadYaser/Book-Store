@@ -13,9 +13,9 @@ function App() {
         <header>
           <div className="header-container">
             <div className="header-left">
-              <h1>Books Store</h1>
+              <h1 className="header-title">Bookstore CMS</h1>
               <nav>
-                <ul>
+                <ul className="links">
                   <li>
                     <Link to="/">Books</Link>
                   </li>

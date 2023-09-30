@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
+
 header {
   background-color: #fff;
   padding: 20px 0;
@@ -9,8 +11,14 @@ header {
   padding: 0 20px;
 }
 
+.header-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.9em;
+  font-weight: bold;
+  color: #0290ff;
+}
+
 .header-left {
-  display: flex;
   align-items: center;
 }
 
@@ -34,10 +42,20 @@ nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.inputs,
+.header-left,
+.book-list,
+.btn-ul,
+.circle-persantage {
+  display: flex;
 }
 
 .book-list {
-  display: flex;
   flex-direction: column;
   padding: 0 5%;
 }
@@ -49,6 +67,21 @@ nav ul li a {
   padding: 2%;
 }
 
+.title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #4386bf;
+}
+
 .card-container {
   display: grid;
   grid-template-columns: 2fr 1fr 1px 1fr;
@@ -56,7 +89,6 @@ nav ul li a {
 
 .btn-ul {
   list-style: none;
-  display: flex;
   flex-direction: row;
   gap: 2%;
   margin-top: 15px;
@@ -68,15 +100,16 @@ nav ul li a {
 }
 
 .book-btn {
-  background-color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.9em;
+  font-weight: 300;
   border: none;
-  outline: none;
-  color: rgb(131, 14, 240);
+  color: #4386bf;
+  background: transparent;
   cursor: pointer;
 }
 
 .circle-persantage {
-  display: flex;
   flex-direction: row;
 }
 
@@ -84,22 +117,25 @@ nav ul li a {
   width: 100px;
   height: 100px;
   border: 10px solid transparent; /* Make the border initially transparent */
-  border: 8px solid blue;
+  border: 8px solid #307bbe;
   border-radius: 50%; /* Make it a circle */
   display: flex;
   justify-content: center;
 }
 
 .per {
+  font-family: 'Montserrat', sans-serif;
   margin-top: 7%;
   margin-left: 7%;
 }
 
 .persantage {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
 }
 
 .completed {
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
 }
 
@@ -115,42 +151,75 @@ nav ul li a {
   margin-left: 10%;
 }
 
+.chapter-h {
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #121212;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+}
+
+.chapter-title {
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  font-family: 'Roboto Slab', serif;
+  color: #121212;
+}
+
 .update-btn {
-  width: 60%;
-  background-color: rgb(108, 108, 236);
+  width: 65%;
   border: none;
   border-radius: 3px;
-  color: #f2f2f2;
-  outline: none;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
 }
 
 hr {
   margin-top: 3%;
   width: 100%;
+  background-color: #e8e8e8;
 }
 
 .form {
   margin-top: 2%;
+  font-family: 'Roboto Slab', serif;
+}
+
+.add-new-h {
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  font-family: 'Montserrat', sans-serif;
+  color: #888;
 }
 
 .inputs {
   margin-top: 1%;
-  display: flex;
   gap: 3%;
 }
 
 input,
 select {
-  padding: 5px;
-  border: 1px solid rgb(228, 206, 206);
-  border-radius: 5px;
+  height: 3em;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
   background-color: #fff;
+  width: 28%;
+  padding-left: 0.5em;
   width: 30%;
 }
 
 .add-btn {
   width: 20%;
-  background-color: rgb(108, 108, 236);
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
   border: none;
   border-radius: 3px;
   color: #f2f2f2;

@@ -16,8 +16,8 @@ const Book = ({
       <div className="card-container">
         <div className="book-container">
           <h6>{category}</h6>
-          <h3>{title}</h3>
-          <p>{author}</p>
+          <p className="title">{title}</p>
+          <p className="author-title">{author}</p>
           <ul className="btn-ul">
             <li>
               <button type="button" className="book-btn def">Comments</button>
@@ -39,8 +39,8 @@ const Book = ({
         </div>
         <span className="boderline" />
         <div className="chapter-container">
-          <h5>CURRENT CHAPTER</h5>
-          <p>Chapter 17</p>
+          <h5 className="chapter-h">CURRENT CHAPTER</h5>
+          <p className="chapter-title">Chapter 17</p>
           <button type="button" className="update-btn">UPDATE PROGRESS</button>
         </div>
       </div>
