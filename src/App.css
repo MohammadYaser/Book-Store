@@ -16,7 +16,8 @@ header {
 
 h1 {
   font-size: 24px;
-  margin-right: 20px; /* Add some space between h1 and the links */
+  margin-right: 20px;
+  color: rgb(102, 102, 212);
 }
 
 nav ul {
@@ -35,18 +36,123 @@ nav ul li a {
   font-weight: bold;
 }
 
-.book-card {
-  display: grid;
-  gap: 25%;
-  margin-top: 3%;
-}
-
-.book-ul {
-  display: grid;
-  gap: 5%;
-}
-
-.book-ul li {
+.book-list {
   display: flex;
-  gap: 5%;
+  flex-direction: column;
+  padding: 0 5%;
+}
+
+.book-card {
+  background-color: #fff;
+  margin-top: 2%;
+  list-style: none;
+  padding: 2%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1px 1fr;
+}
+
+.btn-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  margin-top: 15px;
+}
+
+.btn-ul li:not(:first-child) {
+  border-left: 1px solid rgb(238, 221, 221);
+  padding-left: 9px;
+}
+
+.book-btn {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  color: rgb(131, 14, 240);
+  cursor: pointer;
+}
+
+.circle-persantage {
+  display: flex;
+  flex-direction: row;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent; /* Make the border initially transparent */
+  border: 8px solid blue;
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  justify-content: center;
+}
+
+.per {
+  margin-top: 7%;
+  margin-left: 7%;
+}
+
+.persantage {
+  font-size: 2rem;
+}
+
+.completed {
+  font-size: 15px;
+}
+
+.boderline {
+  border: 1px solid rgb(245, 243, 243);
+  height: 60px;
+  width: 1px;
+  margin-top: 20px;
+}
+
+.chapter-container {
+  display: grid;
+  margin-left: 10%;
+}
+
+.update-btn {
+  width: 60%;
+  background-color: rgb(108, 108, 236);
+  border: none;
+  border-radius: 3px;
+  color: #f2f2f2;
+  outline: none;
+}
+
+hr {
+  margin-top: 3%;
+  width: 100%;
+}
+
+.form {
+  margin-top: 2%;
+}
+
+.inputs {
+  margin-top: 1%;
+  display: flex;
+  gap: 3%;
+}
+
+input,
+select {
+  padding: 5px;
+  border: 1px solid rgb(228, 206, 206);
+  border-radius: 5px;
+  background-color: #fff;
+  width: 30%;
+}
+
+.add-btn {
+  width: 20%;
+  background-color: rgb(108, 108, 236);
+  border: none;
+  border-radius: 3px;
+  color: #f2f2f2;
+  outline: none;
 }
