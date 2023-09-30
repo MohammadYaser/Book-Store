@@ -1,46 +1,52 @@
-import { useDispatch } from 'react-redux';
-import { useState } from 'react';
 import { nanoid } from '@reduxjs/toolkit';
-import { addBook } from '../redux/books/booksSlice';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { newBook } from '../redux/books/booksSlice';
 
 const Form = () => {
-  const [author, setAuthor] = useState('');
-  const [title, setTitle] = useState('');
   const dispatch = useDispatch();
-  const onAuthorChange = (e) => setAuthor(e.target.value);
-  const onTitleChange = (e) => setTitle(e.target.value);
+  const [title, setTitle] = useState('');
+  const [category, setCategory] = useState('');
+  const [author, setAuthor] = useState('');
 
-  const addNewBook = () => {
-    if (author && title) {
-      dispatch(
-        addBook({
-          item_id: nanoid(),
-          author,
-          title,
-        }),
-      );
-    }
+  const onTitleChange = (e) => {
+    setTitle(e.target.value);
   };
 
+  const onAuthorChange = (e) => {
+    setAuthor(e.target.value);
+  };
+  const onCatagoryChange = (e) => {
+    setCategory(e.target.value);
+  };
+  const submitForm = (e) => {
+    e.preventDefault();
+    dispatch(newBook({
+      item_id: nanoid(),
+      author,
+      category,
+      title,
+    }));
+    setTitle('');
+    setAuthor('');
+    setCategory('');
+  };
+
+  const categoriesList = [
+    'Romance', 'Historical', 'Memoir', 'Classic', 'Action',
+  ];
+
   return (
-    <form method="post">
-      <input
-        type="text"
-        id="title"
-        name="title"
-        value={title}
-        onChange={onTitleChange}
-        placeholder="Enter your Title"
-      />
-      <input
-        type="text"
-        id="author"
-        name="author"
-        value={author}
-        onChange={onAuthorChange}
-        placeholder="Enter your Author"
-      />
-      <button type="button" onClick={addNewBook}>Add Book</button>
+    <form onSubmit={submitForm}>
+      <input type="text" value={title} onChange={onTitleChange} placeholder="Enter Book title" required />
+      <input type="text" value={author} onChange={onAuthorChange} placeholder="Enter Author Name" required />
+      <select value={category} onChange={onCatagoryChange} required>
+        <option value="" disabled>Select a category</option>
+        {categoriesList.map((catag) => (
+          <option key={catag} value={catag}>{catag}</option>
+        ))}
+      </select>
+      <button type="submit">ADD BOOK</button>
     </form>
   );
 };
