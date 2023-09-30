@@ -37,16 +37,19 @@ const Form = () => {
   ];
 
   return (
-    <form onSubmit={submitForm}>
-      <input type="text" value={title} onChange={onTitleChange} placeholder="Enter Book title" required />
-      <input type="text" value={author} onChange={onAuthorChange} placeholder="Enter Author Name" required />
-      <select value={category} onChange={onCatagoryChange} required>
-        <option value="" disabled>Select a category</option>
-        {categoriesList.map((catag) => (
-          <option key={catag} value={catag}>{catag}</option>
-        ))}
-      </select>
-      <button type="submit">ADD BOOK</button>
+    <form onSubmit={submitForm} className="form">
+      <h2 className="add-new-h">ADD NEW BOOK</h2>
+      <div className="inputs">
+        <input type="text" value={title} onChange={onTitleChange} placeholder="Enter Book title" required />
+        <input type="text" value={author} onChange={onAuthorChange} placeholder="Enter Author Name" required />
+        <select value={category} onChange={onCatagoryChange} required>
+          <option value="" disabled>Select a category</option>
+          {categoriesList.map((catag) => (
+            <option key={catag} value={catag}>{catag}</option>
+          ))}
+        </select>
+        <button type="submit" className="add-btn">ADD BOOK</button>
+      </div>
     </form>
   );
 };

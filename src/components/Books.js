@@ -13,7 +13,7 @@ const Books = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="book-list">
       <ul className="books">
         {books.map((book) => (
           <Book
@@ -25,8 +25,9 @@ const Books = () => {
           />
         ))}
       </ul>
+      <hr />
       <Form />
-    </>
+    </div>
   );
 };
 
